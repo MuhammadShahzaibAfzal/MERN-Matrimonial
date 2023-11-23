@@ -1,0 +1,16 @@
+export const religions = [
+  "Christianity",
+  "Islam",
+  "Hinduism",
+  "Buddhism",
+  "Judaism",
+  "Sikhism",
+  "Bahá'í Faith",
+  "Jainism",
+  "Shinto",
+  "Taoism",
+  "Zoroastrianism",
+  "Confucianism",
+  "Baha'i Faith",
+  "Other",
+];

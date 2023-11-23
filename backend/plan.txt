@@ -1,0 +1,10 @@
+Registration Process 
+    -Personal Details
+        first name, last name, email, gender,date_of_birth, relegion, country,password
+    -Educational Details
+
+    -Occupation Details
+
+    -Family Details
+
+    -Desired Profile Details

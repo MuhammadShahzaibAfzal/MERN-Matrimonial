@@ -1,0 +1,94 @@
+@import "./colors.scss";
+@import "./responsive.scss";
+
+.chatWrapper {
+  display: flex;
+  column-gap: 20px;
+  height: calc(100vh - 140px);
+  overflow: hidden;
+  padding: 20px;
+  .conversationWrapper {
+    flex: 1;
+    overflow-y: auto;
+    cursor: pointer;
+    .conversation {
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      column-gap: 15px;
+      border-bottom: 1px solid $inputBackground;
+      padding: 10px;
+      img {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+      }
+      span {
+        font-weight: 500;
+      }
+    }
+    .activeConversation {
+      background-color: $inputBackground;
+      border-radius: 10px;
+    }
+  }
+  .messagesWrapper {
+    flex: 4;
+    .messages {
+      height: 95%;
+      padding: 20px;
+      overflow-y: auto;
+      .message {
+        display: flex;
+        flex-direction: column;
+        .messageTop {
+          display: flex;
+          align-items: center;
+          column-gap: 20px;
+
+          img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+          }
+          .messageText {
+            padding: 10px;
+            border-radius: 10px;
+          }
+          .myMessage {
+            background-color: $primaryColor;
+            color: white;
+          }
+          .otherMessage {
+            background-color: $inputBackground;
+          }
+        }
+        .messageBottom {
+          color: rgb(66, 65, 65);
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      }
+
+      .left {
+        align-items: flex-start;
+      }
+      .right {
+        align-items: flex-end;
+      }
+    }
+
+    .chatBox {
+      display: flex;
+      align-items: center;
+      column-gap: 20px;
+      input {
+        border: 1px solid rgb(167, 163, 163);
+        width: 90%;
+        padding: 12px;
+        outline: none;
+        border-radius: 10px;
+      }
+    }
+  }
+}

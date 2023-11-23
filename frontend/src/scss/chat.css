@@ -1,0 +1,92 @@
+.chatWrapper {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  height: calc(100vh - 140px);
+  overflow: hidden;
+  padding: 20px;
+}
+.chatWrapper .conversationWrapper {
+  flex: 1;
+  overflow-y: auto;
+  cursor: pointer;
+}
+.chatWrapper .conversationWrapper .conversation {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 15px;
+       column-gap: 15px;
+  border-bottom: 1px solid #f2f0f0;
+  padding: 10px;
+}
+.chatWrapper .conversationWrapper .conversation img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+.chatWrapper .conversationWrapper .conversation span {
+  font-weight: 500;
+}
+.chatWrapper .conversationWrapper .activeConversation {
+  background-color: #f2f0f0;
+  border-radius: 10px;
+}
+.chatWrapper .messagesWrapper {
+  flex: 4;
+}
+.chatWrapper .messagesWrapper .messages {
+  height: 95%;
+  padding: 20px;
+  overflow-y: auto;
+}
+.chatWrapper .messagesWrapper .messages .message {
+  display: flex;
+  flex-direction: column;
+}
+.chatWrapper .messagesWrapper .messages .message .messageTop {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.chatWrapper .messagesWrapper .messages .message .messageTop img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.chatWrapper .messagesWrapper .messages .message .messageTop .messageText {
+  padding: 10px;
+  border-radius: 10px;
+}
+.chatWrapper .messagesWrapper .messages .message .messageTop .myMessage {
+  background-color: #d23a30;
+  color: white;
+}
+.chatWrapper .messagesWrapper .messages .message .messageTop .otherMessage {
+  background-color: #f2f0f0;
+}
+.chatWrapper .messagesWrapper .messages .message .messageBottom {
+  color: rgb(66, 65, 65);
+  font-size: 14px;
+  margin-top: 10px;
+}
+.chatWrapper .messagesWrapper .messages .left {
+  align-items: flex-start;
+}
+.chatWrapper .messagesWrapper .messages .right {
+  align-items: flex-end;
+}
+.chatWrapper .messagesWrapper .chatBox {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.chatWrapper .messagesWrapper .chatBox input {
+  border: 1px solid rgb(167, 163, 163);
+  width: 90%;
+  padding: 12px;
+  outline: none;
+  border-radius: 10px;
+}/*# sourceMappingURL=chat.css.map */

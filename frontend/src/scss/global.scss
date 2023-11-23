@@ -1,0 +1,667 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import "./colors.scss";
+@import "./responsive.scss";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  // font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* UTILITY CLASSES */
+
+.textCenter {
+  text-align: center;
+}
+
+.textRight {
+  text-align: right;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.textSecondary {
+  color: $secondaryColor;
+}
+
+.textPrimary {
+  color: $primaryColor;
+}
+
+.my-4 {
+  margin: 10px 0;
+}
+
+.my-6 {
+  margin: 20px 0;
+}
+
+.my-8 {
+  margin: 40px 0;
+}
+
+.mx-4 {
+  margin: 0 10px;
+}
+
+/* ###################### BUTTON  ######################*/
+
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btnPrimary {
+  background-color: $primaryColor;
+  color: white;
+
+  &:hover {
+    background-color: $primaryHoverColor;
+  }
+}
+
+.btnSecondary {
+  background-color: $secondaryColor;
+  color: white;
+
+  &:hover {
+    background-color: $secondaryHoverColor;
+  }
+}
+
+.btnDanger {
+  background-color: $errorColor;
+}
+
+.btnSuccess {
+  background-color: $successColor;
+}
+
+.btnWarning {
+  background-color: $warningColor;
+}
+
+.textDanger {
+  color: $errorColor;
+  font-size: 20px;
+}
+
+/* ###################### FORM STYLING  ######################*/
+
+/* INPUT STYLING  */
+.formWrapper {
+  min-height: calc(100vh - 99px);
+  background-image: url("../assets/background.png");
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: center;
+}
+
+.formContainer {
+  width: 600px;
+  max-width: 90%;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid rgb(211, 205, 205);
+
+  .formGroup {
+    display: flex;
+    column-gap: 10px;
+    width: 100%;
+    @include md {
+      flex-direction: column;
+    }
+
+    .formControl {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      margin: 5px 0;
+      input,
+      textarea,
+      select {
+        padding: 10px;
+        outline: none;
+        border: 2px solid transparent;
+        border-radius: 3px;
+        font-family: "Poppins", sans-serif;
+        background-color: $inputBackground;
+        &:focus {
+          border: 2px solid $primaryColor;
+        }
+        &:disabled {
+          border: 2px solid $primaryColor;
+        }
+      }
+      span {
+        color: red;
+      }
+    }
+  }
+
+  .formControl {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+    input,
+    textarea,
+    select {
+      padding: 10px;
+      outline: none;
+      border: 2px solid transparent;
+      border-radius: 3px;
+      font-family: "Poppins", sans-serif;
+      background-color: $inputBackground;
+      &:focus {
+        border: 2px solid $primaryColor;
+      }
+      &:disabled {
+        border: 2px solid $primaryColor;
+      }
+    }
+    span {
+      color: red;
+    }
+  }
+}
+
+.formControl {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+  input,
+  textarea,
+  select {
+    padding: 10px;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    font-family: "Poppins", sans-serif;
+    background-color: $inputBackground;
+    &:focus {
+      border: 2px solid $primaryColor;
+    }
+    &:disabled {
+      border: 2px solid $primaryColor;
+    }
+  }
+  span {
+    color: red;
+  }
+}
+
+.heading {
+  h1 {
+    position: relative;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-weight: 500;
+    &:before {
+      width: 28px;
+      height: 5px;
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 3px;
+      left: 50%;
+      margin-left: -14px;
+      background-color: $primaryColor;
+    }
+
+    &:after {
+      width: 100px;
+      height: 1px;
+      display: block;
+      content: "";
+      position: relative;
+      margin-top: 10px;
+      left: 50%;
+      margin-left: -50px;
+      background-color: $primaryColor;
+    }
+  }
+}
+
+.hero {
+  min-height: calc(100vh - 87px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url("../assets/hero.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+
+  .left {
+    color: white;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    flex: 2;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .right {
+    flex: 1;
+    background-color: white;
+    padding: 30px 20px;
+    margin: 20px;
+    border-radius: 10px;
+  }
+}
+
+.profilesWrapper {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 20px;
+    gap: 20px;
+
+    @include lg {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include md {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include sm {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+.profileCard {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adjust the shadow as needed */
+  padding: 16px; /* Adjust the padding as needed */
+
+  img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}
+
+.filterWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  width: 0px;
+  min-height: 100vh;
+  overflow-x: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: $defaultTransition;
+
+  .filterContainer {
+    padding: 20px 10px;
+
+    .closeIcon {
+      width: 25px;
+      cursor: pointer;
+      height: 25px;
+      position: absolute;
+      right: 10px;
+    }
+  }
+}
+
+.filterWrapperActive {
+  width: 300px;
+}
+
+.singleProfileWrapper {
+  .imagesContainer {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    justify-content: center;
+    img {
+      width: 300px;
+      height: 300px;
+      border-radius: 12px;
+      margin: 10px 0;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+
+    th,
+    td {
+      border: 3px solid $primaryColor;
+      padding: 10px;
+      text-align: left;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.cardsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+  margin-top: 50px;
+
+  h2 {
+    font-weight: normal;
+  }
+
+  .membershipCard {
+    border: 3px solid $primaryColor;
+    padding: 20px;
+    border-radius: 4px;
+    text-align: center;
+  }
+}
+
+.paymentWrapper {
+  display: flex;
+  column-gap: 50px;
+  padding: 0 20px;
+  .sidebar {
+    width: 200px;
+    background-color: $primaryColor;
+    height: 400px;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 10px;
+    p {
+      cursor: pointer;
+      text-transform: uppercase;
+      margin: 10px 0;
+      padding: 20px;
+    }
+    .listOptionActive {
+      background-color: $secondaryColor;
+      padding: 20px;
+      border-radius: 10px;
+    }
+  }
+  .form {
+    width: 500px;
+  }
+}
+
+.sidebar {
+  width: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: width 0.2s ease-in-out;
+  overflow-y: auto;
+  z-index: 1111;
+  flex-wrap: nowrap;
+  background-color: $secondaryColor;
+  color: white;
+
+  @include custom(992px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar__content {
+    padding: 20px 10px;
+    position: relative;
+    .user-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      .username {
+        margin-top: 5px;
+        font-weight: 500;
+        text-align: center;
+      }
+      .role {
+        font-size: 14px;
+      }
+    }
+
+    .list {
+      margin-top: 20px;
+      .active {
+        color: $primaryColor;
+      }
+      .list__item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        padding: 7px 5px;
+        border-radius: 3px;
+        margin: 4px 0;
+        transition: $defaultTransition;
+        font-size: 18px;
+        color: white;
+
+        &:hover {
+          font-weight: bold;
+        }
+
+        .icon {
+          font-size: 20px;
+          margin-right: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    .btn__close {
+      background: transparent;
+      outline: none;
+      border: none;
+      font-size: 35px;
+      position: absolute;
+      font-weight: 500;
+      top: 5px;
+      right: 10px;
+      transition: $defaultTransition;
+      cursor: pointer;
+    }
+  }
+}
+
+.sidebar__active {
+  width: 230px;
+}
+
+@media (min-width: 992px) {
+  .btn__close {
+    display: none;
+  }
+}
+
+.dashboard__layout {
+  display: flex;
+  width: 100%;
+
+  .container {
+    width: 100%;
+  }
+}
+
+.tableHeading {
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 20px;
+}
+
+.table__wrapper {
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px 0;
+  overflow: auto;
+  background-color: $inputBackground;
+  margin: 20px;
+  table {
+    width: 100%;
+    border: none;
+
+    @include lg {
+      font-size: 12px;
+    }
+
+    @include md {
+      font-size: 13px;
+    }
+
+    @include sm {
+      font-size: 11px;
+    }
+
+    thead {
+      color: white;
+
+      tr {
+        background-color: $primaryColor;
+      }
+    }
+
+    tr,
+    td {
+      padding: 13px;
+      // border: none;
+
+      img {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+
+      .actions {
+        width: 180px;
+      }
+    }
+  }
+}
+
+.appbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: $primaryColor;
+  .left {
+    display: flex;
+    align-items: center;
+    .hamburger {
+      width: 30px;
+      height: 30px;
+      margin-right: 20px;
+      cursor: pointer;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+
+      .logo__icon {
+        font-size: 30px;
+        @include md {
+          font-size: 24px;
+        }
+      }
+    }
+    span {
+      font-size: 20px;
+      margin-left: 3px;
+      font-weight: 500;
+
+      @include md {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.count__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  row-gap: 5px;
+  padding: 20px;
+  background-color: $inputBackground;
+
+  .link {
+    text-decoration: none;
+    font-size: 15px;
+  }
+}
+
+.card__wrapper {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+
+  @include md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include sm {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
