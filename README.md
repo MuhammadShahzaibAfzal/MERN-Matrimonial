@@ -1,8 +1,8 @@
-#Shadi.com - Matrimonial Website
+# Shadi.com - Matrimonial Website
 ## Overview
 Shadi.com is a matrimonial website that facilitates users in finding their life partners. The platform allows users to create accounts, add detailed profiles, and explore recommended
 profiles based on their preferences. Shadi.com incorporates advanced features like real-time chatting, profile liking, membership subscriptions, and more.
-##Features
+## Features
 ✅User Authentication
 ✅Profile Creation
 ✅Explore Profiles
@@ -12,7 +12,7 @@ profiles based on their preferences. Shadi.com incorporates advanced features li
 ✅Forgot Password
 ✅Profile Editing
 and more...
-##Technology Stack
+## Technology Stack
 Frontend: React.js
 Backend: Node.js, Express.js
 Database: MongoDB
